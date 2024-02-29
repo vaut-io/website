@@ -1,0 +1,19 @@
+<div style="background-color: #000; block-size: var(--s0); inline-size: var(--s-3);"></div>
+<div style="background-color: #111; block-size: var(--s0); inline-size: var(--s-2);"></div>
+<div style="background-color: #222; block-size: var(--s0); inline-size: var(--s-1);"></div>
+<div style="background-color: #333; block-size: var(--s0); inline-size: var(--s0);"></div>
+<div style="background-color: #444; block-size: var(--s0); inline-size: var(--s1);"></div>
+<div style="background-color: #555; block-size: var(--s0); inline-size: var(--s2);"></div>
+<div style="background-color: #666; block-size: var(--s0); inline-size: var(--s3);"></div>
+<div style="background-color: #777; block-size: var(--s0); inline-size: var(--s4);"></div>
+<div style="background-color: #888; block-size: var(--s0); inline-size: var(--s5);"></div>
+
+<p style="font-size: var(--t7)">Scale 7</p>
+<p style="font-size: var(--t6)">Scale 6</p>
+<p style="font-size: var(--t5)">Scale 5</p>
+<p style="font-size: var(--t4)">Scale 4</p>
+<p style="font-size: var(--t3)">Scale 3</p>
+<p style="font-size: var(--t2)">Scale 2</p>
+<p style="font-size: var(--t1)">Scale 1</p>
+<p style="font-size: var(--t0)">Scale 0</p>
+<p style="font-size: var(--t-1)">Scale -1</p>

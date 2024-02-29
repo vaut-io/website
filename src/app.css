@@ -1,0 +1,315 @@
+:root {
+	/* Fluid type and space system */
+	--f-screen: 100vw;
+
+	/* Fluid screen widths (px), must match media queries below */
+	--f-min-w: 320;
+	--f-max-w: 1280;
+
+	/* Fluid sizes, both for type and space (px) */
+	--f0-min: 18;
+	--f0-max: 24;
+
+	/* Fluid type multiplier (ratio) */
+	--multiplier-min: 1.2;
+	--multiplier-max: 1.33;
+
+	/* Fluid breakpoint */
+	--f-bp: calc((var(--f-screen) - var(--f-min-w) / 16 * 1rem) / (var(--f-max-w) - var(--f-min-w)));
+}
+
+@media screen and (max-width: 320px) {
+	:root {
+		--f-screen: calc(var(--f-min-w) * 1px);
+	}
+}
+@media screen and (min-width: 1280px) {
+	:root {
+		--f-screen: calc(var(--f-max-w) * 1px);
+	}
+}
+
+:root {
+	/* Type min and max */
+	--t-1-min: calc(var(--t0-min) / var(--multiplier-min));
+	--t-1-max: calc(var(--t0-max) / var(--multiplier-max));
+	--t0-min: var(--f0-min);
+	--t0-max: var(--f0-max);
+	--t1-min: calc(var(--t0-min) * var(--multiplier-min));
+	--t1-max: calc(var(--t0-max) * var(--multiplier-max));
+	--t2-min: calc(var(--t1-min) * var(--multiplier-min));
+	--t2-max: calc(var(--t1-max) * var(--multiplier-max));
+	--t3-min: calc(var(--t2-min) * var(--multiplier-min));
+	--t3-max: calc(var(--t2-max) * var(--multiplier-max));
+	--t4-min: calc(var(--t3-min) * var(--multiplier-min));
+	--t4-max: calc(var(--t3-max) * var(--multiplier-max));
+	--t5-min: calc(var(--t4-min) * var(--multiplier-min));
+	--t5-max: calc(var(--t4-max) * var(--multiplier-max));
+	--t6-min: calc(var(--t5-min) * var(--multiplier-min));
+	--t6-max: calc(var(--t5-max) * var(--multiplier-max));
+	--t7-min: calc(var(--t6-min) * var(--multiplier-min));
+	--t7-max: calc(var(--t6-max) * var(--multiplier-max));
+
+	/* Space min and max */
+	--s-3-min: (var(--f0-min) * 0.25);
+	--s-3-max: (var(--f0-max) * 0.25);
+	--s-2-min: (var(--f0-min) * 0.5);
+	--s-2-max: (var(--f0-max) * 0.5);
+	--s-1-min: (var(--f0-min) * 0.75);
+	--s-1-max: (var(--f0-max) * 0.75);
+	--s0-min: var(--f0-min);
+	--s0-max: var(--f0-max);
+	--s1-min: (var(--f0-min) * 1.5);
+	--s1-max: (var(--f0-max) * 1.5);
+	--s2-min: (var(--f0-min) * 2);
+	--s2-max: (var(--f0-max) * 2);
+	--s3-min: (var(--f0-min) * 3);
+	--s3-max: (var(--f0-max) * 3);
+	--s4-min: (var(--f0-min) * 4);
+	--s4-max: (var(--f0-max) * 4);
+	--s5-min: (var(--f0-min) * 6);
+	--s5-max: (var(--f0-max) * 6);
+	--s6-min: (var(--f0-min) * 8);
+	--s6-max: (var(--f0-max) * 8);
+
+	/* Computed (t)ype values */
+	--t-1: calc(((var(--t-1-min) / 16) * 1rem) + (var(--t-1-max) - var(--t-1-min)) * var(--f-bp));
+	--t0: calc(((var(--t0-min) / 16) * 1rem) + (var(--t0-max) - var(--t0-min)) * var(--f-bp));
+	--t1: calc(((var(--t1-min) / 16) * 1rem) + (var(--t1-max) - var(--t1-min)) * var(--f-bp));
+	--t2: calc(((var(--t2-min) / 16) * 1rem) + (var(--t2-max) - var(--t2-min)) * var(--f-bp));
+	--t3: calc(((var(--t3-min) / 16) * 1rem) + (var(--t3-max) - var(--t3-min)) * var(--f-bp));
+	--t4: calc(((var(--t4-min) / 16) * 1rem) + (var(--t4-max) - var(--t4-min)) * var(--f-bp));
+	--t5: calc(((var(--t5-min) / 16) * 1rem) + (var(--t5-max) - var(--t5-min)) * var(--f-bp));
+	--t6: calc(((var(--t6-min) / 16) * 1rem) + (var(--t6-max) - var(--t6-min)) * var(--f-bp));
+	--t7: calc(((var(--t7-min) / 16) * 1rem) + (var(--t7-max) - var(--t7-min)) * var(--f-bp));
+
+	/* Computed (s)pace values, change the subtraction for different scaling */
+	--s-3: calc(((var(--s-3-min) / 16) * 1rem) + (var(--s-2-max) - var(--s-3-min)) * var(--f-bp));
+	--s-2: calc(((var(--s-2-min) / 16) * 1rem) + (var(--s-1-max) - var(--s-2-min)) * var(--f-bp));
+	--s-1: calc(((var(--s-1-min) / 16) * 1rem) + (var(--s0-max) - var(--s-1-min)) * var(--f-bp));
+	--s0: calc(((var(--s0-min) / 16) * 1rem) + (var(--s1-max) - var(--s0-min)) * var(--f-bp));
+	--s1: calc(((var(--s1-min) / 16) * 1rem) + (var(--s2-max) - var(--s1-min)) * var(--f-bp));
+	--s2: calc(((var(--s2-min) / 16) * 1rem) + (var(--s3-max) - var(--s2-min)) * var(--f-bp));
+	--s3: calc(((var(--s3-min) / 16) * 1rem) + (var(--s4-max) - var(--s3-min)) * var(--f-bp));
+	--s4: calc(((var(--s4-min) / 16) * 1rem) + (var(--s5-max) - var(--s4-min)) * var(--f-bp));
+	--s5: calc(((var(--s5-min) / 16) * 1rem) + (var(--s6-max) - var(--s5-min)) * var(--f-bp));
+}
+
+/* Other custom properties */
+:root {
+	--measure: 80ch;
+
+	/* Line heights */
+	--leading-flat: 1;
+	--leading-fine: 1.15;
+	--leading-standard: 1.5;
+	--leading-loose: 1.7;
+
+	/* Fonts */
+	--font-base: 'Mona Sans', Helvetica, Arial;
+	--font-special: 'iA Writer Quattro', Andale Mono, Courier, Lucida, Monaco, Arial;
+	--font-normal: 400;
+	--font-medium: 500;
+	--font-bold: 700;
+	--gutter: var(--space-s-l);
+	--transition-base: 250ms ease;
+	--transition-movement: 200ms linear;
+	--transition-fade: 300ms ease;
+	--transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+	--transition-bounce-fast: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+
+	/* Colors */
+	--color-dark: #030303;
+	--color-dark-glare: #171717;
+	--color-mid: #444;
+	--color-mid-glare: #ccc;
+	--color-light: #fff;
+	--color-light-shade: #f7f7f7;
+	--color-primary: #ff006a;
+	--color-primary-glare: #ffeff6;
+	--color-secondary: #00ffd4;
+	--color-tertiary: #350df2;
+	--color-quaternary: #ffd501;
+	--color-quinary: #00d5ff;
+	--color-quinary-shade: #0ac;
+
+}
+
+/* Reset styles, via https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	min-inline-size: 0;
+	max-inline-size: var(--measure);
+}
+
+/* Set exceptions to max-inline-size */
+html,
+body,
+div,
+header,
+nav,
+main,
+footer,
+section,
+article {
+	max-inline-size: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Set core root defaults, */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	text-rendering: optimizeSpeed;
+	overflow-wrap: break-word;
+	overflow-x: hidden;
+	min-height: 100vh;
+	min-height: 100svh;
+	line-height: var(--leading-standard);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: var(--leading-fine);
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+	filter: blur(10px);
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+/* Collapse table borders by default */
+table {
+	border-collapse: collapse;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove button border and change cursor */
+button {
+	cursor: pointer;
+	border: none;
+}
+
+/* Remove animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Element styles */
+
+p {
+	font-size: var(--t0);
+}
+
+h1 {
+	font-size: var(--t7);
+}
+
+h2 {
+	font-size: var(--t5);
+}
+
+h3 {
+	font-size: var(--t3);
+}
+
+h4 {
+	font-size: var(--t2);
+}

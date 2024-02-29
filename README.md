@@ -1,5 +1,10 @@
 # Website
 
+## TO-DO
+
+- Choose between Directus or Payload CMS
+- Learn Figma
+
 ## Fonts
 
 https://fonts.google.com/specimen/Ysabeau+SC?preview.text=vaut&preview.text_type=custom
@@ -15,9 +20,8 @@ https://fonts.google.com/specimen/Ysabeau+SC?preview.text=vaut&preview.text_type
 Let us handle everything so you don't have to.
 
 - Design
-- Development
-- Hosting
-- Analytics
+- Development and hosting
+- Add-on: analytics and SEO
 
 Do interviews? We use XYZ technologies (JAMstack - Astro, Tailwind, Alpinejs, Svelte).
 
@@ -30,8 +34,8 @@ Do interviews? We use XYZ technologies (JAMstack - Astro, Tailwind, Alpinejs, Sv
 - Project complexity – charge more for a new website. Conversely, your rate should be lower if you update an existing site or build a simple one using a template.
 - Back-end tasks – in addition to designing and building their website, clients may ask you to handle its back end. This task may include managing the website’s hosting, domain, and plugins.
 
-
 ### FLAT FEE WEBSITES
+
 - Single page site revision: $200 flat fee
 
 - Single page portfolio: $500 flat fee with unlimited revisions before
@@ -58,14 +62,14 @@ Bundle your web design service with solutions that improve ROI. These solutions 
 ## What can I offer?
 
 - Processed and optimized media files such as images, fonts, etc.
-- Fast as f*ck page loads and SEO optimization
+- Fast as f\*ck page loads and SEO optimization
 - Enterprise-level website security and 99.99% uptime guarantee
 - Custom fonts, brand colors, assets, etc.
 - GDPR-compliant, easy-to-use web analytics service with the ability to create and run UTM
   marketing campaigns
 - Endless scalability
 - A complete package: I will design the website to fit around your brand, or I can assist in building out a new
-brand identity if needed.
+  brand identity if needed.
 - Use your own custom colors and layout
 - Best-in-class speed and SEO optimization
 - Always-online with a secure design and staging website where we can preview
@@ -77,8 +81,6 @@ brand identity if needed.
 - Have lots of content and adding more on a continual basis? No problem at all,
   with the ability to integrate a custom CMS
 
-
-
 Methodology:
 
 Understand your needs (key questions: target audience, their problems, your
@@ -88,13 +90,11 @@ solutions, what differentiates you)-> determine content -> collect assets + desi
 
 https://www.reddit.com/r/sveltejs/comments/172ua02/approaching_6k_usd_monthly_revenue_with_my_svelte/
 
-
-
+- Go through Liliana, Jesper, Alicia's parents
 
 ### Translations
 
 https://old.reddit.com/r/sveltejs/comments/193wvz8/sveltekit_230_is_out_with_a_new_hook/
-
 
 ### Animation libraries
 
@@ -102,7 +102,6 @@ https://old.reddit.com/r/sveltejs/comments/193wvz8/sveltekit_230_is_out_with_a_n
 - https://animxyz.com/
 - https://webdevamin.com/
 - https://animista.net/
-
 
 For dynamics tailwind properties in classes (maybe won't work if I want to map
 an array...):
@@ -112,7 +111,6 @@ an array...):
 const bg = `bg-${color}-500`;
 ---
 ```
-
 
 Draw animation (53 mins https://youtu.be/NniT0vKyn-E):
 
@@ -139,32 +137,9 @@ path.style.strokeDathOffset = pathLength
 </style>
 ```
 
-
 Component variants:
 
 https://tailwindcss.com/docs/content-configuration#dynamic-class-names
-
-
-
-## FIGMA
-
-- Unsplash
-- Icons8 background remover
-- Easometric (convert 2D design into isometric to change perspective of frame)
-- Content reel (populate text and images)
-- Autoflow (for flow diagrams)
-- Iconsax (or iconify?)
-- Contrast (check accessibility)
-
-- https://www.figma.com/community/plugin/735098390272716381/Iconify
-- Diagram / Genius AI: https://www.figma.com/blog/ai-the-next-chapter-in-design/
-
-- Figma mirror for mobile designs!
-
-
-
-
-
 
 - nyflit
 - recoete.com
@@ -184,9 +159,8 @@ https://tailwindcss.com/docs/content-configuration#dynamic-class-names
 - npx astro add tailwind
 - npm i -D prettier prettier-plugin-tailwindcss prettier-plugin-astro
 
-- "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
-- npx onchange "**/*" -- npx prettier --write --ignore-unknown {{changed}}
-
+- "prettier-watch": "onchange \"\*_/_\" -- prettier --write --ignore-unknown {{changed}}"
+- npx onchange "\*_/_" -- npx prettier --write --ignore-unknown {{changed}}
 
 ## Helpful links
 
@@ -210,10 +184,6 @@ https://picocss.com/docs/scroller.html
 - https://razabayani.com/mastering-animation-in-alpinejs-a-complete-guide/
 - [Lightweight CSS Animations on Scroll using Alpine JS](https://www.youtube.com/watch?v=n4LxOtCwlUg0
 
-### Internationalization
-
-- https://www.defined.net/blog/internationalizing-docs-pages-with-astro/
-
 ### Search
 
 - https://pagefind.app/
@@ -222,7 +192,16 @@ https://picocss.com/docs/scroller.html
 
 - https://security.stackexchange.com/questions/142496/which-security-measures-make-sense-for-a-static-web-site
 
+### Design systems
+
+- https://gridless.design
 
 ## Inspiration
 
 - https://kizo-agency.com/
+- https://www.okupter.com/
+- https://set.studio/
+
+## Process
+
+- Priority guides before wireframes: https://alistapart.com/article/priority-guides-a-content-first-alternative-to-wireframes/
