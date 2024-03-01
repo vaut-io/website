@@ -14,7 +14,7 @@
 
 <Box>
 	<Frame>
-		<img src="/media/image.jpg" alt="">
+		<img src="/media/image.jpg" alt="" />
 	</Frame>
 	<Center max="100rem">
 		<Stack>

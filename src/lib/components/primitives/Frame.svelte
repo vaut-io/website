@@ -2,8 +2,7 @@
 	// The element's aspect ratio
 	export let ratio = '4:3';
 
-
-	let splitRatio = ratio.split(':')
+	let splitRatio = ratio.split(':');
 </script>
 
 <div class="frame" style="--n: {splitRatio[0]}; --d: {splitRatio[1]}">

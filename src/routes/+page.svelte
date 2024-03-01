@@ -1,46 +1,112 @@
 <script>
-	import { Stack } from '$lib/components/primitives'
-	import { Gutter, Prose } from '$lib/components'
+	import { Gutter } from '$lib/components';
 </script>
 
-<Gutter>
-	<header>
-	</header>
-	<main>
-		<Stack space={2}>
-			<h1><span class="u">v</span>aut</h1>
-			<Prose>
+<main>
+	<section>
+		<Gutter>
+			<div class="flow">
+				<h1><span class="underline">v</span>aut.io</h1>
 				<p>designing and building for the <em>modern web</em></p>
-				<!-- <h2>Advantages</h2>
-				<ul>
-					<li>Security is a top priority</li>
+			</div>
+		</Gutter>
+	</section>
+	<section class="is-inverted">
+		<Gutter>
+			<div class="flow">
+				<h2>Services</h2>
+				<p>Do you need a personal or business website? Tell a story, sell your brand.</p>
+				<p>
+					Central to our process is <span class="underline">identifying your need</span>. What does
+					this mean in practice?
+				</p>
+				<p></p>
+				<h3>Design</h3>
+				<p>We design websites to be responsive and accessible.</p>
+				<h3>Development</h3>
+				<p>
+					We focus on accessibility, speed, security. Using robust technologies. Accessible, fast,
+					secure.
+				</p>
+				<p>Integrations? Content management system?</p>
+				<!--
+				<ul class="cluster">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
 				</ul>
-				<p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p> -->
-			</Prose>
-		</Stack>
-
-
-		<!-- Doubles as an "about" page -->
-
-		<!-- Robust technologies -->
-
-		<!-- Security is a top priority -->
-	</main>
-	<footer>
-
-	</footer>
-</Gutter>
+				-->
+				<h3>SEO</h3>
+				<p>SEO (search engine optimization) involves. Need content produced? We can help.</p>
+				<h3>Support</h3>
+				<p>
+					A purpose-built CMS (content management system) solution just for your needs. No, we don't
+					work with WordPress.
+				</p>
+			</div>
+		</Gutter>
+	</section>
+</main>
+<footer>
+	<Gutter>
+		<div class="flow">
+			<h2>Eager to learn more?</h2>
+			<p>Whatever you are looking for, we can figure something out.</p>
+			<p>Reach out at <a href="mailto:email@example.com">email@example.com</a></p>
+			<p><small>&copy; 2024 vaut.io</small></p>
+		</div>
+	</Gutter>
+</footer>
 
 <style>
-	main {
-		padding-block: var(--s3)
+	main,
+	footer {
+		background-color: var(--color-light);
+		color: var(--color-dark);
 	}
+
+	.is-inverted {
+		background-color: var(--color-dark);
+		color: var(--color-light);
+	}
+
+	section,
+	footer {
+		padding-block: var(--space-2xl-3xl);
+	}
+
+	.flow > * + * {
+		margin-block-start: var(--space-s-m);
+	}
+
+	/*
+	.cluster {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: var(--s-1);
+	}
+	*/
 
 	h1 {
-		font-size: var(--t5);
+		font-size: var(--step-3);
+	}
+	h2 {
+		font-size: var(--step-2);
+	}
+	h3 {
+		font-size: var(--step-1);
+	}
+	p {
+		font-size: var(--step-0);
 	}
 
-	.u {
+	small {
+		font-size: var(--step--1);
+	}
+
+	.underline {
 		text-decoration: underline;
 	}
 </style>
