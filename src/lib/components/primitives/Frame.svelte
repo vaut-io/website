@@ -18,8 +18,8 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.frame > img,
-	.frame > video {
+	.frame > :global(img),
+	.frame > :global(video) {
 		inline-size: 100%;
 		block-size: 100%;
 		object-fit: cover;

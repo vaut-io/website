@@ -6,7 +6,7 @@
 	<section>
 		<Gutter>
 			<div class="flow">
-				<h1><span class="underline">v</span>aut.io</h1>
+				<h1><span class="underline">v</span>aut</h1>
 				<p>designing and building for the <em>modern web</em></p>
 			</div>
 		</Gutter>
@@ -28,7 +28,8 @@
 					We focus on accessibility, speed, security. Using robust technologies. Accessible, fast,
 					secure.
 				</p>
-				<p>Integrations? Content management system?</p>
+				<p>Integrations? Content management system? Need a way to manage your content? Or maybe you don't.</p>
+				<p>We'll choose the right CMS solution for you: Sanity, Storyblok</p>
 				<!--
 				<ul class="cluster">
 					<li>1</li>
@@ -101,7 +102,6 @@
 	p {
 		font-size: var(--step-0);
 	}
-
 	small {
 		font-size: var(--step--1);
 	}

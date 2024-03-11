@@ -2,4 +2,6 @@
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+
+# Ignore app css file
 app.css

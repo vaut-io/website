@@ -1,12 +1,9 @@
 <script lang="ts">
 	export let list = false;
-
 	// A CSS justify-content value
 	export let justify = 'flex-start';
-
 	// A CSS align-items value
 	export let align = 'flex-start';
-
 	// A CSS gap value. The minimum space between the clustered child elements.
 	export let space = 'var(--s1)';
 </script>

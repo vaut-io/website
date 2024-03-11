@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let start = true;
 	export let end = true;
 </script>
@@ -13,7 +13,7 @@
 
 		margin-inline: auto;
 		inline-size: 100%; /* Needed in order to be a flexbox child */
-		max-inline-size: calc(var(--fluid-max-width) * 1px);
+		max-inline-size: calc(var(--f-max-width) * 1px);
 	}
 
 	.start {

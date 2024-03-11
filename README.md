@@ -5,6 +5,19 @@
 - Choose between Directus or Payload CMS
 - Learn Figma
 
+
+## Starters
+
+- https://github.com/okupter/kitforstartups/tree/main/starter
+
+## CMS
+
+### Database hosting
+
+https://aws.amazon.com/rds/
+https://neon.tech/
+https://www.digitalocean.com/ (?)
+
 ## Fonts
 
 https://fonts.google.com/specimen/Ysabeau+SC?preview.text=vaut&preview.text_type=custom
@@ -14,6 +27,10 @@ https://fonts.google.com/specimen/Ysabeau+SC?preview.text=vaut&preview.text_type
 - https://transform.tools/typescript-to-zod
 - https://www.patterns.dev/
 - https://www.uxtoast.com/ui-design/figma-get-started
+
+## Business management
+
+- https://www.hellobonsai.com/
 
 ## Pricing
 
@@ -90,11 +107,19 @@ solutions, what differentiates you)-> determine content -> collect assets + desi
 
 https://www.reddit.com/r/sveltejs/comments/172ua02/approaching_6k_usd_monthly_revenue_with_my_svelte/
 
-- Go through Liliana, Jesper, Alicia's parents
+- Get connections through Liliana, Jesper, Alicia's parents
+
+### Learn SvelteKit
+
+- https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog
+
+### Learn Astro
+
+- https://learnastro.dev/
 
 ### Translations
 
-https://old.reddit.com/r/sveltejs/comments/193wvz8/sveltekit_230_is_out_with_a_new_hook/
+- https://old.reddit.com/r/sveltejs/comments/193wvz8/sveltekit_230_is_out_with_a_new_hook/
 
 ### Animation libraries
 
@@ -102,15 +127,6 @@ https://old.reddit.com/r/sveltejs/comments/193wvz8/sveltekit_230_is_out_with_a_n
 - https://animxyz.com/
 - https://webdevamin.com/
 - https://animista.net/
-
-For dynamics tailwind properties in classes (maybe won't work if I want to map
-an array...):
-
-```astro
----
-const bg = `bg-${color}-500`;
----
-```
 
 Draw animation (53 mins https://youtu.be/NniT0vKyn-E):
 
@@ -137,21 +153,9 @@ path.style.strokeDathOffset = pathLength
 </style>
 ```
 
-Component variants:
-
-https://tailwindcss.com/docs/content-configuration#dynamic-class-names
-
-- nyflit
-- recoete.com
-- rakas
-- fusar.io
-- rakas
-
-- Ethical disclaimer: I do not accept projects involving the promotion of animal exploitation. This includes taking on clients directly working with customers who exploit animals for the production of food and beverage products, clothing, experimentation, or entertainment.
+Component variants: https://tailwindcss.com/docs/content-configuration#dynamic-class-names
 
 ## Install sequence
-
-### SvelteKit
 
 ### Astro
 
@@ -196,13 +200,32 @@ https://picocss.com/docs/scroller.html
 
 - https://gridless.design
 
+### CSS
+
+- https://gridbyexample.com/examples/
+- https://grid.malven.co/
+
+### E-commerce
+
+- prestashop
+
 ## Inspiration
 
 - https://kizo-agency.com/
 - https://www.okupter.com/
 - https://set.studio/
 - https://clearleft.com/
+- https://www.tristanparker.co.uk/
+- https://paitdigital.com/
+- https://monogram.io/
+- https://robbowen.digital
 
 ## Process
 
 - Priority guides before wireframes: https://alistapart.com/article/priority-guides-a-content-first-alternative-to-wireframes/
+
+## WordPress
+
+https://css-tricks.com/css-tricks-is-a-poster-child-wordpress-site/
+
+
