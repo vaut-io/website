@@ -49,35 +49,77 @@
 	});
 
 	hcpairs.forEach((a, i) => {
-		hcpairsBarCharts.push({
-			labels: ['1', '2', '3', '4', '5', '6', '7'],
-			statement: a.statement,
-			datasets: [
-				{
-					label: 'Primer curso',
-					data: a.firstYear,
-					backgroundColor: [
-						'rgba(255, 134,159,0.4)',
-					],
-					borderWidth: 2,
-					borderColor: [
-						'rgba(255, 134, 159, 1)',
-					]
-				},
-				{
-					label: 'Último curso',
-					data: a.lastYear,
-					backgroundColor: [
-						'rgba(255, 177, 101,0.4)'
-					],
-					borderWidth: 2,
-					borderColor: [
-						'rgba(255, 177, 101, 1)'
-					]
-				}
-			]
-		});
+		hcpairsBarCharts.push([
+			{
+				labels: ['1', '2', '3', '4', '5', '6', '7'],
+				statement: a.statement,
+				datasets: [
+					{
+						label: 'Primer curso',
+						data: a.firstYear.map(count => (count / 96)),
+						backgroundColor: getBackgroundColors(a),
+						borderWidth: 2,
+						borderColor: getBorderColors(a),
+					},
+					{
+						label: 'Último curso',
+						data: a.lastYear.map(count => (count / 96)),
+						backgroundColor: getBackgroundColors(a),
+						borderWidth: 2,
+						borderColor: getBorderColors(a),
+					},
+				],
+			},
+			{
+				labels: ['1', '2', '3', '4', '5', '6', '7'],
+				statement: a.statement,
+				datasets: [
+				],
+			},
+		]);
 	});
+
+	function getBackgroundColors(a) {
+		if (a.inverted) return ([
+			'hsl(0, 50%, 50%, 0.7)',
+			'hsl(20, 50%, 50%, 0.7)',
+			'hsl(40, 50%, 50%, 0.7)',
+			'hsl(60, 50%, 50%, 0.7)',
+			'hsl(80, 50%, 50%, 0.7)',
+			'hsl(100, 50%, 50%, 0.7)',
+			'hsl(120, 50%, 50%, 0.7)',
+		]);
+		return ([
+			'hsl(120, 50%, 50%, 0.7)',
+			'hsl(100, 50%, 50%, 0.7)',
+			'hsl(80, 50%, 50%, 0.7)',
+			'hsl(60, 50%, 50%, 0.7)',
+			'hsl(40, 50%, 50%, 0.7)',
+			'hsl(20, 50%, 50%, 0.7)',
+			'hsl(0, 50%, 50%, 0.7)',
+		]);
+	}
+
+	function getBorderColors(a) {
+		if (a.inverted) return ([
+			'hsl(0, 50%, 50%, 1)',
+			'hsl(20, 50%, 50%, 1)',
+			'hsl(40, 50%, 50%, 1)',
+			'hsl(60, 50%, 50%, 1)',
+			'hsl(80, 50%, 50%, 1)',
+			'hsl(100, 50%, 50%, 1)',
+			'hsl(120, 50%, 50%, 1)',
+		]);
+		return ([
+			'hsl(120, 50%, 50%, 1)',
+			'hsl(100, 50%, 50%, 1)',
+			'hsl(80, 50%, 50%, 1)',
+			'hsl(60, 50%, 50%, 1)',
+			'hsl(40, 50%, 50%, 1)',
+			'hsl(20, 50%, 50%, 1)',
+			'hsl(0, 50%, 50%, 1)',
+		]);
+	}
 </script>
 
 <main class="gutter">
@@ -93,29 +135,45 @@
 			<p>V = verdadero / F = falso</p>
 		</hgroup>
 		<ul class="flex flex-col gap-xl-2xl">
-			{#each rnpqPieCharts as chart, i}
+			{#each rnpqPieCharts as chart}
 				<li class="flex flex-wrap items-center gap-y-3xs-2xs gap-x-l-xl">
-					<div class="basis-[0] grow-[999] min-w-[50%]">
-						<p>{i + 1}. {chart.statement}</p>
+					<div class="basis-[0] grow-[999] min-w-[25%]">
+						<h3 class="text-0 font-normal font-base tracking-base">{chart.statement}</h3>
 					</div>
-					<div class="basis-[25ch]">
-						<Pie data={chart} options={{ responsive: true }} />
+					<div class="basis-[40ch]">
+						<div class="max-w-[25ch] mx-auto">
+							<Pie data={chart} options={{ responsive: true }} />
+						</div>
 					</div>
 				</li>
 			{/each}
 		</ul>
 	</section>
-	<ul class="flex flex-col gap-l-xl py-2xl-3xl">
+	<section class="flex flex-col gap-l-xl py-2xl-3xl">
 		<hgroup class="flex flex-col gap-[1em]">
 			<h2>HC-PAIRS</h2>
 		</hgroup>
-		{#each hcpairsBarCharts as chart}
-			<li class="flex flex-col gap-xs-s">
-				<p>{chart.statement}</p>
-				<Bar data={chart} options={{ responsive: true }} />
-			</li>
-		{/each}
-	</ul>
+		<ul class="flex flex-col gap-xl-2xl">
+			{#each hcpairsBarCharts as chart}
+				<!-- <li class="flex flex-col gap-3xs-2xs">
+					<h3 class="text-0 font-normal font-base tracking-base">{chart[0].statement}</h3>
+					<div class="chart-grid max-w-[60ch]">
+						<div>
+							<Bar data={chart[0]} options={{ responsive: true }} />
+						</div>
+					</div>
+				</li> -->
+				<li class="flex flex-wrap items-center gap-y-3xs-2xs gap-x-l-xl">
+					<div class="basis-[0] grow-[999] min-w-[25%]">
+						<h3 class="text-0 font-normal font-base tracking-base">{chart[0].statement}</h3>
+					</div>
+					<div class="basis-[40ch]">
+						<Bar data={chart[0]} options={{ responsive: true }} />
+					</div>
+				</li>
+			{/each}
+		</ul>
+	</section>
 </main>
 
 <style>
