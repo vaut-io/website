@@ -1,31 +1,25 @@
+/* @import "tailwindcss"; */
+@import 'tailwindcss/preflight' layer(base);
+@import 'tailwindcss/utilities' layer(utilities);
+
 :root {
 	/* Fluid screen widths (px), must match media queries below */
-	--f-min-width: 320;
-	--f-max-width: 1280;
+	--f-min-width: 320; --f-max-width: 1280;
 	/* Fluid sizes, both for type and space (px) */
-	--f-min-size: 18;
-	--f-max-size: 24;
+	--f-min-size: 18; --f-max-size: 24;
 	/* Fluid type multiplier (ratio) */
-	--f-min-ratio: 1.2;
-	--f-max-ratio: 1.5;
+	--f-min-ratio: 1.2; --f-max-ratio: 1.4;
 	/* Fluid breakpoint */
 	--f-screen: 100vw;
 	--f-bp: calc((var(--f-screen) - var(--f-min-width) / 16 * 1rem) / (var(--f-max-width) - var(--f-min-width)));
 }
-
-@media screen and (max-width: 320px) {
-	:root {
-		--f-screen: calc(var(--f-min-width) * 1px);
-	}
-}
-@media screen and (min-width: 1280px) {
-	:root {
-		--f-screen: calc(var(--f-max-width) * 1px);
-	}
-}
+@media screen and (max-width: 320px) { :root { --f-screen: calc(var(--f-min-width) * 1px); } }
+@media screen and (min-width: 1280px) { :root { --f-screen: calc(var(--f-max-width) * 1px); } }
 
 :root {
-	/* Type min and max scale */
+	/* Type scale */
+	--t-2-min: calc(var(--t-1-min) / var(--f-min-ratio));
+	--t-2-max: calc(var(--t-1-max) / var(--f-max-ratio));
 	--t-1-min: calc(var(--t0-min) / var(--f-min-ratio));
 	--t-1-max: calc(var(--t0-max) / var(--f-max-ratio));
 	--t0-min: var(--f-min-size);
@@ -38,22 +32,14 @@
 	--t3-max: calc(var(--t2-max) * var(--f-max-ratio));
 	--t4-min: calc(var(--t3-min) * var(--f-min-ratio));
 	--t4-max: calc(var(--t3-max) * var(--f-max-ratio));
-	/* Computed  tep values */
-	--step--1: calc(((var(--t-1-min) / 16) * 1rem) + (var(--t-1-max) - var(--t-1-min)) * var(--f-bp));
-	--step-0: calc(((var(--t0-min) / 16) * 1rem) + (var(--t0-max) - var(--t0-min)) * var(--f-bp));
-	--step-1: calc(((var(--t1-min) / 16) * 1rem) + (var(--t1-max) - var(--t1-min)) * var(--f-bp));
-	--step-2: calc(((var(--t2-min) / 16) * 1rem) + (var(--t2-max) - var(--t2-min)) * var(--f-bp));
-	--step-3: calc(((var(--t3-min) / 16) * 1rem) + (var(--t3-max) - var(--t3-min)) * var(--f-bp));
-	--step-4: calc(((var(--t4-min) / 16) * 1rem) + (var(--t4-max) - var(--t4-min)) * var(--f-bp));
-
-	/* Space min and max scale */
+	/* Space scale */
 	--3xs-min: (var(--f-min-size) * 0.25);
 	--3xs-max: (var(--f-max-size) * 0.25);
 	--2xs-min: (var(--f-min-size) * 0.5);
 	--2xs-max: (var(--f-max-size) * 0.5);
-	--xs-min: (var(--f-min-size) * 0.75); /* xs */
+	--xs-min: (var(--f-min-size) * 0.75);
 	--xs-max: (var(--f-max-size) * 0.75);
-	--s-min: var(--f-min-size); /* s */
+	--s-min: var(--f-min-size);
 	--s-max: var(--f-max-size);
 	--m-min: (var(--f-min-size) * 1.5);
 	--m-max: (var(--f-max-size) * 1.5);
@@ -67,47 +53,43 @@
 	--3xl-max: (var(--f-max-size) * 6);
 	--4xl-min: (var(--f-min-size) * 8);
 	--4xl-max: (var(--f-max-size) * 8);
-	/* Computed space values, change the subtraction for different scaling */
-	--space-3xs-2xs: calc(((var(--3xs-min) / 16) * 1rem) + (var(--2xs-max) - var(--3xs-min)) * var(--f-bp));
-	--space-2xs-xs: calc(((var(--2xs-min) / 16) * 1rem) + (var(--xs-max) - var(--2xs-min)) * var(--f-bp));
-	--space-xs-s: calc(((var(--xs-min) / 16) * 1rem) + (var(--s-max) - var(--xs-min)) * var(--f-bp));
-	--space-s-m: calc(((var(--s-min) / 16) * 1rem) + (var(--m-max) - var(--s-min)) * var(--f-bp));
-	--space-m-l: calc(((var(--m-min) / 16) * 1rem) + (var(--m-max) - var(--m-min)) * var(--f-bp));
-	--space-l-xl: calc(((var(--l-min) / 16) * 1rem) + (var(--xl-max) - var(--l-min)) * var(--f-bp));
-	--space-xl-2xl: calc(((var(--xl-min) / 16) * 1rem) + (var(--2xl-max) - var(--xl-min)) * var(--f-bp));
-	--space-2xl-3xl: calc(((var(--2xl-min) / 16) * 1rem) + (var(--3xl-max) - var(--2xl-min)) * var(--f-bp));
-	--space-3xl-4xl: calc(((var(--3xl-min) / 16) * 1rem) + (var(--4xl-max) - var(--3xl-min)) * var(--f-bp));
+	--5xl-min: (var(--f-min-size) * 12);
+	--5xl-max: (var(--f-max-size) * 12);
 }
 
-/* Other custom properties */
-:root {
-	--measure: 80ch;
+@theme {
+	/* Computed type scale */
+	--font-size--2: calc(((var(--t-2-min) / 16) * 1rem) + (var(--t-2-max) - var(--t-2-min)) * var(--f-bp));
+	--font-size--1: calc(((var(--t-1-min) / 16) * 1rem) + (var(--t-1-max) - var(--t-1-min)) * var(--f-bp));
+	--font-size-0: calc(((var(--t0-min) / 16) * 1rem) + (var(--t0-max) - var(--t0-min)) * var(--f-bp));
+	--font-size-1: calc(((var(--t1-min) / 16) * 1rem) + (var(--t1-max) - var(--t1-min)) * var(--f-bp));
+	--font-size-2: calc(((var(--t2-min) / 16) * 1rem) + (var(--t2-max) - var(--t2-min)) * var(--f-bp));
+	--font-size-3: calc(((var(--t3-min) / 16) * 1rem) + (var(--t3-max) - var(--t3-min)) * var(--f-bp));
+	--font-size-4: calc(((var(--t4-min) / 16) * 1rem) + (var(--t4-max) - var(--t4-min)) * var(--f-bp));
+	/* Computed space scale, change the subtraction for different scaling */
+	--spacing-3xs-2xs: calc(((var(--3xs-min) / 16) * 1rem) + (var(--2xs-max) - var(--3xs-min)) * var(--f-bp));
+	--spacing-2xs-xs: calc(((var(--2xs-min) / 16) * 1rem) + (var(--xs-max) - var(--2xs-min)) * var(--f-bp));
+	--spacing-xs-s: calc(((var(--xs-min) / 16) * 1rem) + (var(--s-max) - var(--xs-min)) * var(--f-bp));
+	--spacing-s-m: calc(((var(--s-min) / 16) * 1rem) + (var(--m-max) - var(--s-min)) * var(--f-bp));
+	--spacing-m-l: calc(((var(--m-min) / 16) * 1rem) + (var(--l-max) - var(--m-min)) * var(--f-bp));
+	--spacing-l-xl: calc(((var(--l-min) / 16) * 1rem) + (var(--xl-max) - var(--l-min)) * var(--f-bp));
+	--spacing-xl-2xl: calc(((var(--xl-min) / 16) * 1rem) + (var(--2xl-max) - var(--xl-min)) * var(--f-bp));
+	--spacing-2xl-3xl: calc(((var(--2xl-min) / 16) * 1rem) + (var(--3xl-max) - var(--2xl-min)) * var(--f-bp));
+	--spacing-3xl-4xl: calc(((var(--3xl-min) / 16) * 1rem) + (var(--4xl-max) - var(--3xl-min)) * var(--f-bp));
+	--spacing-4xl-5xl: calc(((var(--4xl-min) / 16) * 1rem) + (var(--5xl-max) - var(--4xl-min)) * var(--f-bp));
 
-	/* Line heights */
-	--leading-flat: 1;
-	--leading-fine: 1.15;
-	--leading-standard: 1.5;
-	--leading-loose: 1.7;
-
-	/* Fonts */
-	--font-base: 'Mona Sans', Helvetica, Arial;
-	--font-special: 'iA Writer Quattro', Andale Mono, Courier, Lucida, Monaco, Arial;
-	--font-normal: 400;
-	--font-medium: 500;
-	--font-bold: 700;
-	--transition-base: 250ms ease;
-	--transition-movement: 200ms linear;
-	--transition-fade: 300ms ease;
-	--transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-	--transition-bounce-fast: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+	/* Font family */
+	--font-family-base: 'Mona Sans', Helvetica, Arial;
+	--font-family-special: serif;
 
 	/* Colors */
-	--color-dark: #0f000f;
+	--color-neutral-darkest: #0f000f;
 	--color-dark-glare: #171717;
 	--color-mid: #444;
 	--color-mid-glare: #ccc;
-	--color-light: #fff6ff;
 	--color-light-shade: #f7f7f7;
+	--color-neutral-lightest: #fff6ff;
+
 	--color-primary: #ff006a;
 	--color-primary-glare: #ffeff6;
 	--color-secondary: #00ffd4;
@@ -115,163 +97,78 @@
 	--color-quaternary: #ffd501;
 	--color-quinary: #00d5ff;
 	--color-quinary-shade: #0ac;
+
+	/* Line height */
+	--line-height-flat: 1;
+	--line-height-tight: 1.15;
+	--line-height-normal: 1.5;
+	--line-height-loose: 1.7;
+
+	/* Letter spacing */
+	--letter-spacing-normal: +0ch;
+
+	/* Widths */
+	--width-measure: 80ch;
+
+	--transition-base: 250ms ease;
+	--transition-movement: 200ms linear;
+	--transition-fade: 300ms ease;
+	--transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+	--transition-bounce-fast: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
 }
 
-/* Reset styles, via https://piccalil.li/blog/a-more-modern-css-reset/ */
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-	min-inline-size: 0;
-}
-
-/* Set exceptions to max-inline-size */
-/* html,
-body,
-div,
-header,
-nav,
-main,
-footer,
-section,
-article {
-	max-inline-size: none;
-} */
-
-/* Remove default margin in favour of better control in authored CSS */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-	margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-	list-style: none;
-}
-
-/* Prevent font size inflation on Safari */
-html {
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-	text-size-adjust: none;
-}
-
-/* Set core root defaults, */
-html:focus-within {
-	scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-	text-rendering: optimizeSpeed;
-	/* overflow-wrap: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto; */
-	overflow-x: hidden;
-	min-height: 100vh;
-	min-height: 100svh;
-	line-height: var(--leading-standard);
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-	line-height: var(--leading-fine);
-}
-
-/* Balance text wrapping on headings */
-h1,
-h2,
-h3,
-h4 {
-	text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-	text-decoration-skip-ink: auto;
-	color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-	max-width: 100%;
-	display: block;
-}
-
-/* Blur images when they have no alt attribute */
-img:not([alt]) {
-	filter: blur(10px);
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-	min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-	scroll-margin-block: 5ex;
-}
-
-/* Collapse table borders by default */
-table {
-	border-collapse: collapse;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-/* Remove button border and change cursor */
-button {
-	cursor: pointer;
-	border: none;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-	html:focus-within {
-		scroll-behavior: auto;
+@layer base {
+	/* Reset styles, inspired by https://piccalil.li/blog/a-more-modern-css-reset/ */
+	*, *::before, *::after { box-sizing: border-box; min-inline-size: 0; margin: 0; padding: 0; }
+	/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+	ul[role='list'], ol[role='list'] { list-style: none; }
+	/* Prevent font size inflation on Safari */
+	html { -moz-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
+	/* Smooth auto-scroll */
+	:has(:target) { scroll-behavior: smooth; }
+	/* Set core body defaults */
+	body {
+		text-rendering: optimizeSpeed;
+		@apply font-base font-normal text-0 text-neutral-darkest bg-neutral-lightest leading-normal min-h-svh overflow-x-hidden;
 	}
-
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
+	/* Make images easier to work with */
+	img, picture {
+		@apply max-w-full h-auto align-middle italic bg-no-repeat bg-cover bg-center;
+		shape-margin: 0.75rem;
 	}
+	/* Blur images when they have no alt attribute */
+	img:not([alt]) { filter: blur(10px); }
+	/* Inherit fonts for inputs and buttons */
+	input, button, textarea, select { font: inherit; }
+	/* Make sure textareas without a rows attribute are not tiny */
+	textarea:not([rows]) { min-height: 5em; }
+	/* Anything that has been anchored to should have extra scroll margin */
+	:target { scroll-margin-block: 5ex; }
+	/* Collapse table borders by default */
+	table { border-collapse: collapse; }
+	/* Inherit fonts for inputs and buttons */
+	input, button, textarea, select { font: inherit; }
+	/* Remove button border and change cursor */
+	button { cursor: pointer; border: none; }
+	/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+	@media (prefers-reduced-motion: reduce) {
+		:has(:target) { scroll-behavior: auto; }
+		*, *::before, *::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+	/* Set core text defaults */
+	h1, h2, h3, button, input, label { @apply leading-tight; }
+	h1, h2, h3 { @apply font-bold font-special text-balance }
+	h1 { @apply text-3; }
+	h2 { @apply text-2; }
+	h3 { @apply text-1; }
+	p { @apply max-w-measure text-pretty; }
+	small { @apply text--1; }
 }
+
+.gutter { @apply w-full mx-auto max-w-[calc(var(--f-max-width)*1px)]; }
+.gutter:not(.no-padding) { @apply px-l-xl; }

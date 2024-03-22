@@ -5,7 +5,6 @@
 - Choose between Directus or Payload CMS
 - Learn Figma
 
-
 ## Starters
 
 - https://github.com/okupter/kitforstartups/tree/main/starter
@@ -129,8 +128,11 @@ https://www.reddit.com/r/sveltejs/comments/172ua02/approaching_6k_usd_monthly_re
 - https://animista.net/
 
 Draw animation (53 mins https://youtu.be/NniT0vKyn-E):
-
 Custom counter ALSO there.
+
+### Images
+
+https://imgproxy.net/
 
 ```astro
 <script>
@@ -227,5 +229,3 @@ https://picocss.com/docs/scroller.html
 ## WordPress
 
 https://css-tricks.com/css-tricks-is-a-poster-child-wordpress-site/
-
-

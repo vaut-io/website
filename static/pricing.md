@@ -44,5 +44,3 @@ Client Training
 
 Show the client the way around the site
 Explain updates and ways of uploading content
-
-
