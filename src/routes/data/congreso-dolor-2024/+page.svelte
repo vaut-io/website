@@ -63,7 +63,7 @@
 					},
 					{
 						label: 'Último curso',
-						data: a.lastYear.map(count => (count / 96)),
+						data: a.lastYear.map(count => (count / 42)),
 						backgroundColor: getBackgroundColors(a),
 						borderWidth: 2,
 						borderColor: getBorderColors(a),
