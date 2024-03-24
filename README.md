@@ -221,6 +221,8 @@ https://picocss.com/docs/scroller.html
 - https://paitdigital.com/
 - https://monogram.io/
 - https://robbowen.digital
+- https://www.erlang-solutions.com/
+- https://spatie.be/
 
 ## Process
 
