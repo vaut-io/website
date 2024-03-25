@@ -223,6 +223,7 @@ https://picocss.com/docs/scroller.html
 - https://robbowen.digital
 - https://www.erlang-solutions.com/
 - https://spatie.be/
+- https://launchscout.com
 
 ## Process
 

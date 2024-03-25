@@ -120,6 +120,7 @@
 			<h1>Datos visualizados</h1>
 			<p>Esta página web corresponde al estudio, <i>"Conocimiento del dolor y actitudes hacia el dolor crónico entre estudiantes universitarios de fisioterapia: análisis preliminar de un estudio observacional"</i>.</p>
 			<p>En cada gráfico, verde (oscuro) = mejor, rojo (claro) = peor. Pulsa una etiqueta arriba del gráfico para mostrar y esconder los grupos. Coloca el puntero o aprieta sobre una parte del gráfico para ver la frecuencia absoluta o relativa de respuestas.</p>
+			<p>En los gráficos circulares de RNPQ, el círculo interior corresponde al 1° curso y el exterior al 4° curso.</p>
 		</hgroup>
 	</section>
 	<section class="flex flex-col gap-l-xl pt-2xl-3xl">
