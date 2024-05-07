@@ -232,3 +232,19 @@ https://picocss.com/docs/scroller.html
 ## WordPress
 
 https://css-tricks.com/css-tricks-is-a-poster-child-wordpress-site/
+
+### Worth learning?
+
+Yes (and I say this as someone who doesn't like either Wordpress or PHP). As a single dev, you aren't going to be getting contracts to build large websites, so Wordpress will keep you moving fast.
+
+As a word of warning, avoid race to the bottom websites at all costs. A lot of $500 websites just aren't worth building because the client wants a $5000 website for $500. On that front, make sure you learn WooCommerce well because those clients are generally better to work with, pay better, and (most importantly), pay on time.
+
+Do your own hosting. Have them sign a contract where you will build their website upfront for $x then host it for a minimum of 1 year at a monthly cost of $y which includes an hour or two of updates (specify an hourly rate for additional hours). You will make most of your money from the hosting and the hosting costs allow you to lower your upfront costs a little which matters to some clients.
+
+Make sure you pay a lawyer to write up your contracts for you to make sure you are protected. Don't trust random contracts from the internet to be what you need for your business in your local area/state. It's worth every penny and you can make a lawyer contact for if/when you have a client start up issues. They can also push through the paperwork to make an LLC for you which will help protect you from these bad actors.
+
+On the professional front, make sure you keep books well and hire a CPA to sort out anything you don't know. You'll save money in the end.
+
+Finally, one of the hardest things in small website design is getting copy and images. Get to know a couple photographers in your area that you can recommend to clients to solve the image problem. A photographer who does drone work is especially helpful to have in your pocket.
+
+AI text isn't great (always reads a little off to me), but meh copy is better than a blank website. I wish that was around when I was grinding out sites. If you create copy, your client should be paying extra and if you give them your initial AI run, their feedback should help you fix up the worst parts.
