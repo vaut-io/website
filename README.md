@@ -5,6 +5,10 @@
 - Choose between Directus or Payload CMS
 - Learn Figma
 
+## Logo idea
+
+VVVVV logo (each staggered, and faded out slightly more)... Could animate with each going from 0 opacity to 1 in sequence, out and in reverse
+
 ## Starters
 
 - https://github.com/okupter/kitforstartups/tree/main/starter
