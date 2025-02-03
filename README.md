@@ -224,6 +224,7 @@ https://picocss.com/docs/scroller.html
 - https://www.erlang-solutions.com/
 - https://spatie.be/
 - https://launchscout.com
+- https://www.monterail.com/
 
 ## Process
 
@@ -248,3 +249,50 @@ On the professional front, make sure you keep books well and hire a CPA to sort 
 Finally, one of the hardest things in small website design is getting copy and images. Get to know a couple photographers in your area that you can recommend to clients to solve the image problem. A photographer who does drone work is especially helpful to have in your pocket.
 
 AI text isn't great (always reads a little off to me), but meh copy is better than a blank website. I wish that was around when I was grinding out sites. If you create copy, your client should be paying extra and if you give them your initial AI run, their feedback should help you fix up the worst parts.
+
+
+## Helpful business tips
+
+What I do is I sell myself as a service. Rather than using a CMS for the client to update their site, I build all my sites in just static html and css and sell a maintenance and hosting package for \$150 a month. Unlimited edits, hosting, and lifetime updates. They love it. Most of these people don’t want to edit it themselves or maintain their site. They’d rather pay someone to handle everything for them. That’s what I sell. And it’s very popular. I have 35 monthly paying clients right now and counting. All of them are small business sites. So for \$150 a month they have their own web developer partner in their pocket that they can call on anytime. And no, no one calls me at 3 am asking to change their text on the home page. It doesn’t happen. I think I did maybe 10 hours of total edits last year between all my clients. So no I am not getting run ragged from constant edits. They’re busy running their business. They don’t have time to obsess over their site and think of all new things to add. I sell peace of mind. And it’s pretty darn profitable.
+
+It’s closer to \$4300. I have a few discounts where I needed to make a sale. I go down to \$99 a month to close the sale if I have to. I’d rather have \$99 a month than 0 and I built all my own templates so I really just spend 4-5 hours adding content and image optimization and the site is done. So it’s very little cost in terms of time.
+
+10 hours of edits all year for all total clients. Thats It. Not 10 per client. I only charge upfront fees if there’s more than 5 pages or it’s a bigger website.
+
+Average company size is 1-10 employees
+
+I don’t have anyone with large databases. I just recently started doing Shopify integrations after I started working with another backend developer who can take my custom code and integrate it into Shopify. Its amazing what he can do. I have 2 shops I’m working on now. It costs \$850-\$950 flat to do a Shopify integration.
+
+That’s why I don’t use a CMS. They’re not tech savvy people. They’d rather have someone else doing their edits so why waste my time masking or hooking up and CMS when I can just as easily edit the html.
+
+Referrals and repeat customers. I haven’t done sales in a year or two. Before I’d just hit up businesses from google maps and yelp. Cold call.
+
+6 month minimum contract. If they aren’t in it for the long term then 6 months would scare off anyone not taking it seriously. Im also very picky with who I work with. If they don’t pay up I take the site down. There’s also late fees if they don’t and early termination fees too. I use square up to set up recurring invoices and the clients can select auto Pay. So when the invoice goes out it gets charged by the system and we don’t have to do anything. It’s all automated.
+
+Yup. Just started doing contracts. I use HoneyBook and they do digital e-sign documents and boilerplate web design contracts that you can edit and add your own stuff.
+
+Nope. No CMS. Just raw html and css. Whenever they want edits I just change the code by hand. Usually adding or changing text or images. It’s not bad at all. I use Netlify to host. They host static sites for \$0 a month. Saves me hundreds a month. And it’s integrated with git. So when I push the changes from visual studio, Netlify picks it up in seconds. Deployment is so easy.
+
+Here’s one of my sites.
+
+[https://www.whitebrushpainting.com](https://www.whitebrushpainting.com/)
+
+Loads incredibly fast with a 99 page speed score and near perfects on lighthouse. This is my specialty.
+
+And another I am about to launch
+
+[https://parkplaceproperties.netlify.app](https://parkplaceproperties.netlify.app/)
+
+All done with just html and css. I built both of these sites in under 14 hours. I’ve got a pretty good workflow going.
+
+0\$ down and \$150 a month for the typical small business 5 pager site. That park place site cost \$4,000 for design and development. They are doing their own hosting. So no monthly maintenance fee. Working on a couple very custom sites with very unique designs that are upwards of \$5000-\$6000 right now. Got some real good ones in the pipeline I’m really excited about.
+
+How many hours does it take for you to make a whole 5 page static website? Are you new? When I first started I was charging \$1200-\$1800 lump sum per site. Sometimes it’d take me 20-30 Hours to design and build them. Now after a few years experience and a portfolio to back it up, it charge \$3k minimum for my work and \$500-\$1500 for design (to my designer). It takes me maybe 7-10 hours to code a whole website and it’s done. I sell 1-2 lump sum sites a month. People are willing to pay it.
+
+It doesn’t matter how fast I finished it. I don’t bill by the hour. I bill by the project. If I billed by the hour I wouldn’t make \$3k. I know exactly how long it takes me to make a website and any size.
+
+Never ever ever ever ask the client what their budget is. They don’t know how much your work is worth and they will try to make it as small as possible. Your job is to say your going rate and sell them on why you deserve that rate and what you do that’s Special.
+
+The other side is most of my clients are on a subscription model. \$0 down \$150 a month includes hosting, unlimited edits, 24/7 support. That takes out the budget entirely. I flip one of my prebuilt templates I already made in html and css and spend like 2 hours putting it together, moving their content and images over, hiring my copywriter to write better content, and it’s done. It’s a high quality site, don’t get me wrong. It scores 100/100 page speed, professionally designed, and professionally built meticulously by hand. It’s a high quality product. I’m just copy and pasting the project and adding their images and content to it. So while I can throw up a site in 2 hours, it doesn’t mean it’s shit like a Wordpress theme pump and dump. It just means I have already built sites that I am reusing which also helps subsidize the cost of having that design made and me making it.
+
+So try that. Lump sum at least \$2500 an f youre experience and know what your doing. Or \$150 a month. Give them the choice.
